@@ -7,7 +7,7 @@ from back_CreationProduits import *
 scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/spreadsheets', 
          "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"] 
 
-creds = ServiceAccountCredentials.from_json_keyfile_name("C:/Users/arthu/Desktop/VSC/Creds.json", scope) 
+creds = ServiceAccountCredentials.from_json_keyfile_name("Creds.json", scope) 
 client = gspread.authorize(creds) 
 
 #df = pd.read_csv(r'Produits.csv')
