@@ -1,9 +1,8 @@
 import streamlit as st
 import pandas as pd
-import gspread 
-from oauth2client.service_account import ServiceAccountCredentials 
+
 from back_CreationProduits import *
-from google.oauth2 import service_account
+
 
 """
 scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/spreadsheets', 
