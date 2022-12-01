@@ -7,13 +7,14 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials 
 from google.oauth2 import service_account
 
+"""
 scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/spreadsheets', 
          "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"] 
 
 #creds = ServiceAccountCredentials.from_json_keyfile_name("C:/Users/arthu/Desktop/VSC/Creds.json", scope) 
 creds = service_account.Credentials.from_service_account_info(st.secrets["gcp_service_account"], scopes = scope) 
 client = gspread.authorize(creds) 
-
+"""
 #df = pd.read_csv(r'shy.csv')
 
 
@@ -268,14 +269,14 @@ def Traitement(df,mode):
 
         dfSH = df[df["existe_shopify"]=="Non"].copy()
         dfOutputShopify = MasterShopify(dfSH)
-        Export_to_Gsheet("Automatisation ECom","Products",dfOutputShopify)
+        #Export_to_Gsheet("Automatisation ECom","Products",dfOutputShopify)
         return dfOutputShopify
     
     elif mode == "BigBlue":
         
         dfBB = df[df["existe_BigBlue"]=="Non"].copy()
         dfOutputBB = Master_Bigblue(dfBB)
-        Export_to_Gsheet("Automatisation ECom","BigBlue",dfOutputBB)
+        #Export_to_Gsheet("Automatisation ECom","BigBlue",dfOutputBB)
         return dfOutputBB
     
 #Traitement(df,"Shopify")
