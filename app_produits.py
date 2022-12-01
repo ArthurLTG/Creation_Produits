@@ -4,14 +4,7 @@ import pandas as pd
 from back_CreationProduits import *
 
 
-"""
-scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/spreadsheets', 
-         "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"] 
 
-#creds = ServiceAccountCredentials.from_json_keyfile_name("Creds.json", scope) 
-creds = service_account.Credentials.from_service_account_info(st.secrets["gcp_service_account"], scopes = scope) 
-client = gspread.authorize(creds) 
-"""
 #df = pd.read_csv(r'Produits.csv')
 
 
