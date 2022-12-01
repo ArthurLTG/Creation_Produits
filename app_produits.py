@@ -5,13 +5,14 @@ from oauth2client.service_account import ServiceAccountCredentials
 from back_CreationProduits import *
 from google.oauth2 import service_account
 
+"""
 scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/spreadsheets', 
          "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"] 
 
 #creds = ServiceAccountCredentials.from_json_keyfile_name("Creds.json", scope) 
 creds = service_account.Credentials.from_service_account_info(st.secrets["gcp_service_account"], scopes = scope) 
 client = gspread.authorize(creds) 
-
+"""
 #df = pd.read_csv(r'Produits.csv')
 
 
@@ -33,12 +34,12 @@ def run():
         if catalogue == "Shopify":
             st.subheader("Création de produits : SHOPIFY")
             st.dataframe(dfFINAL)
-            st.success("Fichier Shopify CSV a télécharger ici: "+ "https://docs.google.com/spreadsheets/d/10JfYG93ARlx-H9XvO-Ml4DCETvTrdDglgvXkOTl4ImI/edit#gid=0&range=A1")
+            #st.success("Fichier Shopify CSV a télécharger ici: "+ "https://docs.google.com/spreadsheets/d/10JfYG93ARlx-H9XvO-Ml4DCETvTrdDglgvXkOTl4ImI/edit#gid=0&range=A1")
             
         elif catalogue == "BigBlue":
             st.subheader("Création de produits : BIGBLUE")
             st.dataframe(dfFINAL)
-            st.success("Fichier BigBlue CSV a télécharger ici: "+ "https://docs.google.com/spreadsheets/d/10JfYG93ARlx-H9XvO-Ml4DCETvTrdDglgvXkOTl4ImI/edit#gid=544025935&range=A1")
+            #st.success("Fichier BigBlue CSV a télécharger ici: "+ "https://docs.google.com/spreadsheets/d/10JfYG93ARlx-H9XvO-Ml4DCETvTrdDglgvXkOTl4ImI/edit#gid=544025935&range=A1")
         
         csv = convert_df(dfFINAL)
         st.download_button("Télécharger fichier",csv,f"Creation_Produits_{catalogue}.csv","text/csv",key='download-csv')
