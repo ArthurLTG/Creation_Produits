@@ -39,7 +39,7 @@ def run():
 
 # -------------------------------------------------------------------------------------------------------------------
 st.set_page_config(layout="wide")
-st.title("Gestion de catalogue")
+st.title("Création de produits")
 st.markdown("---")
 
 col1, col2, col3, col4, col5 = st.columns([1,1,5,1,1])
