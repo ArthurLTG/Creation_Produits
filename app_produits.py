@@ -39,7 +39,14 @@ def run():
 
 # -------------------------------------------------------------------------------------------------------------------
 st.set_page_config(layout="wide")
-st.title("Création de produits")
+
+c1, c2 = st.columns([1,5])
+
+with c1:
+    st.image("https://d3k81ch9hvuctc.cloudfront.net/company/KyNgj5/images/83d8ac85-eb81-466f-bd68-3ab849e4a9ba.png", width=300)
+
+with c2:
+    st.title("Création de produits")
 st.markdown("---")
 
 col1, col2, col3, col4, col5 = st.columns([1,1,5,1,1])
