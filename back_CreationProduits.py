@@ -185,7 +185,7 @@ def Master_Bigblue(dfBB):
 
     def CountryCode(pays):
         if pays == "CHINE":
-            codeISO == "CN"
+            codeISO = "CN"
         elif pays == "TUNISIE":
             codeISO = "TN"
         elif pays == "PORTUGAL":
