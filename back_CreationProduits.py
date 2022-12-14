@@ -202,7 +202,7 @@ def Master_Bigblue(dfBB):
     dfBB["TrackLots"] = "n"
     dfBB["Foldable"] = dfBB["Plie/Suspendu"].apply(lambda x : "y" if x == "PLIE" else "n")
     dfBB["AlreadyPackaged"] = "n"
-    dfBB["ProductValue"] = dfBB["PrixAchat]
+    dfBB["ProductValue"] = dfBB["PrixAchat"]
     dfBB["Currency"] = "EUR"
     dfBB["Description"] = ""
     dfBB["Customs"] = ""
