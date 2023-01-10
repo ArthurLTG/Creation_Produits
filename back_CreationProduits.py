@@ -84,9 +84,9 @@ def MasterShopify(dfSH):
     dfSH["ID"] = "" # -> Généré par Shopify lors de la création
     dfSH["Handle"] = ""  # -> Généré par Shopify à partir du title
     dfSH["Command"] = "MERGE"
-    dfSH["Title"] = dfSH["Designation"].apply(lambda x: x.title()) + " ( " + dfSH["saison_groupe"] + " / " + dfSH["Rayon"] + " / " + dfSH["couleur_1"] + " )"
+    dfSH["Title"] = dfSH["Famille"] + " " + dfSH["SsFamille"] + dfSH["Designation"].apply(lambda x: x.title()) + " ( " + dfSH["saison_groupe"] + " / " + dfSH["Rayon"] + " / " + dfSH["couleur_1"] + " )"
     dfSH["Vendor"] = "FROMFUTURE"
-    dfSH["Type"] = dfSH["Designation"] + " / " + dfSH["saison_groupe"] + " / " + dfSH["Rayon"]
+    dfSH["Type"] = dfSH["Famille"] + " " + dfSH["SsFamille"] + dfSH["Designation"] + " / " + dfSH["saison_groupe"] + " / " + dfSH["Rayon"]
     dfSH["Tags"] = dfSH["Rayon"] + ", " + dfSH["saison_groupe"] + ", " + dfSH["Famille"] + ", " + dfSH["SsFamille"] + ", " + dfSH["TypeProduit"] + ", " + dfSH["Couleur mère"]+ ", " + dfSH["BarCode"] + "-" + dfSH["Couleur"].apply(lambda x : x.split(" ")[0])
     dfSH["Tags Command"] = "REPLACE"
     dfSH["Status"] = "Draft"
